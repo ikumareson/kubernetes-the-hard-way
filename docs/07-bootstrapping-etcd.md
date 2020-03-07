@@ -85,7 +85,12 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 ```
+Open the etcd port 2380 to allow communication between the master nodes.
 
+```
+ firewall-cmd --zone=public --add-port=2380/tcp
+```
+ 
 ### Start the etcd Server
 
 ```
